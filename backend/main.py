@@ -17,12 +17,10 @@ app.add_middleware(
 
 # Pydantic models for Request Body
 class TaskCreate(BaseModel):
-    id: int  
     title: str 
     completed: bool = False 
 
 class TaskUpdate(BaseModel):
-    id: int  
     title: str 
     completed: bool  
 
@@ -40,15 +38,15 @@ def get_db():
     finally:
         db.close()
 
-@app.post("/tasks/", response_model=TaskResponse)
+@app.post("/tasks/", response_model=TaskResponse) 
 async def create_task(task: TaskCreate, db: Session = Depends(get_db)):
-    db_task = Task(id=task.id, title=task.title, completed=task.completed)
+    db_task = Task(title=task.title, completed=task.completed)
     db.add(db_task)
     db.commit()
     db.refresh(db_task)
     return db_task
 
-@app.get("/tasks/", response_model=list[TaskCreate])
+@app.get("/tasks/", response_model=list[TaskResponse])
 async def read_tasks(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
     tasks = db.query(Task).offset(skip).limit(limit).all()
     return tasks
