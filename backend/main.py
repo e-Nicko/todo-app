@@ -2,8 +2,18 @@ from fastapi import FastAPI, HTTPException, Depends
 from sqlalchemy.orm import Session
 from models import Task, SessionLocal, Base, engine
 from pydantic import BaseModel
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
+
+# Setup CORS
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Список разрешенных источников
+    allow_credentials=True,
+    allow_methods=["*"],  # Разрешение всех методов
+    allow_headers=["*"],  # Разрешение всех заголовков
+)
 
 # Pydantic models for Request Body
 class TaskCreate(BaseModel):
