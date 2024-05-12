@@ -27,22 +27,18 @@ const App: React.FC = () => {
   // Загрузка всех задач
   useEffect(() => {
     const fetchTasks = async () => {
-      const response = await fetch("http://localhost:8000/tasks/")
-        .then((response) => response.json())
-        .then((data) => {
-          if (data.length === 0) {
-            // Обработка пустого ответа
-            console.log("No tasks found");
-          } else {
-            // Обработка полученных данных
-            console.log("Tasks:", data);
-          }
-        })
-        .catch((error) => {
-          console.error("Error fetching tasks:", error);
-        });
-      const data = await response.json();
-      setTasks(data);
+      try {
+        const response = await fetch("http://localhost:8000/tasks/");
+        const data = await response.json();
+        if (data.length === 0) {
+          console.log("No tasks found");
+        } else {
+          console.log("Tasks:", data);
+          setTasks(data);  // Устанавливаем задачи в состояние
+        }
+      } catch (error) {
+        console.error("Error fetching tasks:", error);
+      }
     };
 
     fetchTasks();
