@@ -7,12 +7,12 @@ app = FastAPI()
 
 # Pydantic models for Request Body
 class TaskCreate(BaseModel):
-    title: String
-    completed: Boolean = False
+    title: str  # Используйте str вместо String
+    completed: bool = False  # Используйте bool вместо Boolean
 
 class TaskUpdate(BaseModel):
-    title: String
-    completed: Boolean
+    title: str  # Используйте str вместо String
+    completed: bool  # Используйте bool вместо Boolean
 
 # Dependency
 def get_db():
