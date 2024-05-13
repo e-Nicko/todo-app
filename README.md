@@ -1,4 +1,4 @@
-# To-Do App with Python/React
+# 📝✅ "To-Do App" by Python, Fast API Postgre, React
 
 [![Python](https://img.shields.io/badge/python-3.11.0-blue.svg)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/fastapi-0.111.0-green.svg)](https://fastapi.tiangolo.com/)
