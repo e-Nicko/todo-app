@@ -1,10 +1,10 @@
 # To-Do App with Python/React
 
-[![Python](https://img.shields.io/badge/python-3.9-blue.svg)](https://www.python.org/)
-[![FastAPI](https://img.shields.io/badge/fastapi-0.88.0-green.svg)](https://fastapi.tiangolo.com/)
-[![React](https://img.shields.io/badge/react-18.2.0-61DAFB.svg)](https://reactjs.org/)
-[![TypeScript](https://img.shields.io/badge/typescript-4.9.4-blue.svg)](https://www.typescriptlang.org/)
-[![Vite](https://img.shields.io/badge/vite-5.2.11-purple.svg)](https://vitejs.dev/)
+[![Python](https://img.shields.io/badge/python-3.11.0-blue.svg)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/fastapi-0.111.0-green.svg)](https://fastapi.tiangolo.com/)
+[![React](https://img.shields.io/badge/react-18.2.66-61DAFB.svg)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/typescript-7.2.0-blue.svg)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/vite-5.2.11-A750FE.svg)](https://vitejs.dev/)
 
 Это приложение "To-Do" было разработано в качестве методической образовательной задачи для демонстрации взаимодействия между бекендом на Python/FastAPI и фронтендом на React/TypeScript.
 
@@ -59,7 +59,14 @@
 
 ### Запуск бекенда
 
--       uvicorn main:app --reload
+1.   Активируйте виртуальное окружение Python (если используется):
+        ```bash
+        .\venv\Scripts\activate   # Windows
+        source venv/bin/activate  # Unix/macOS
+        ```
+
+
+2.       uvicorn main:app --reload
 
     Бекенд будет запущен и доступен по адресу: [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 
