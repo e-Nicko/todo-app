@@ -64,7 +64,8 @@
         .\venv\Scripts\activate   # Windows
         source venv/bin/activate  # Unix/macOS
         ```
-
+        Когда закончите сессию разработки, можете деактивировать виртуальное окружение с помощью команды deactivate в терминале, где было активировано окружение. Это вернет вас к глобальному окружению Python.
+          
 
 2.       uvicorn main:app --reload
 
