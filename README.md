@@ -8,7 +8,7 @@
 
 Это приложение "To-Do" было разработано в качестве методической образовательной задачи для демонстрации взаимодействия между бекендом на Python/FastAPI и фронтендом на React/TypeScript.
 
-Подробная статья-урок по созданию данного приложения To-Do доступно по адресу: [https://webadventures.ru/todo-app-python-react/](https://webadventures.ru/todo-app-python-react/)
+Подробная статья-урок по созданию данного приложения To-Do доступна по адресу: [https://webadventures.ru/todo-app-python-react/](https://webadventures.ru/todo-app-python-react/)
 
 
 ## Технологический стек
