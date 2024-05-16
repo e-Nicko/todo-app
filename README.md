@@ -8,14 +8,16 @@
 
 Это приложение "To-Do" было разработано в качестве методической образовательной задачи для демонстрации взаимодействия между бекендом на Python/FastAPI и фронтендом на React/TypeScript.
 
-Подробная статья-урок по созданию данного приложения To-Do доступно по адресу: [https://webadventures.ru/todo-app-python-react/](https://webadventures.ru/todo-app-python-react/)
+- Подробная статья-урок по созданию данного приложения To-Do доступна по адресу: <br>
+[https://webadventures.ru/todo-app-python-react/](https://webadventures.ru/todo-app-python-react/)
+- [Дизайн макеты в Figma](https://www.figma.com/design/82XLv7BujFtQfscglOLDju/ToDo-App?node-id=0-1&t=mzFv79mBFzUP2Job-0)
 
 
 ## Технологический стек
 
 ### Бекенд
 
-- **Python** - популярный язык программирования
+- **Python** - один из самы перспективных языков программирования для построения api-сревиса, по индексу [TIOBE](https://www.tiobe.com/tiobe-index/) и [Google Trands](https://trends.google.ru/trends/explore?date=now%201-d&geo=RU&q=python,C,Java,JavaScript,Go&hl=en) занимает уверенную 1-ю позицию.
 - **FastAPI** - современный, быстрый и высокопроизводительный веб-фреймворк для создания API на Python
 - **uvicorn** - асинхронный сервер для запуска FastAPI приложений
 - **PostgreSQL** - популярная реляционная база данных
