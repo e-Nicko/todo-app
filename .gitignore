@@ -1,6 +1,9 @@
 # Виртуальное окружение Python
 venv/ 
 
+# pycache
+**/__pycache__
+
 # Frontend зависимости
 /node_modules/
 
