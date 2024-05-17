@@ -10,7 +10,8 @@
 
 - Подробная статья-урок по созданию данного приложения To-Do доступна по адресу: <br>
 [https://webadventures.ru/todo-app-python-react/](https://webadventures.ru/todo-app-python-react/)
-- Дизайн макеты иньеофейса: [Figma - ToDo app](https://www.figma.com/design/82XLv7BujFtQfscglOLDju/ToDo-App?node-id=0-1&t=mzFv79mBFzUP2Job-0)
+- Дизайн макеты иньеофейса: <br>
+[Figma - ToDo app](https://www.figma.com/design/82XLv7BujFtQfscglOLDju/ToDo-App?node-id=0-1&t=mzFv79mBFzUP2Job-0)
 
 
 ## Технологический стек
