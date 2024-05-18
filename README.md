@@ -6,31 +6,31 @@
 [![TypeScript](https://img.shields.io/badge/typescript-7.2.0-blue.svg)](https://www.typescriptlang.org/)
 [![Vite](https://img.shields.io/badge/vite-5.2.11-A750FE.svg)](https://vitejs.dev/)
 
-Это приложение "To-Do" было разработано в качестве методической образовательной задачи для демонстрации взаимодействия между бекендом на Python/FastAPI и фронтендом на React/TypeScript.
+This "To-Do" application was developed as an educational project to demonstrate the interaction between a Python/FastAPI backend and a React/TypeScript frontend.
 
-- Подробная статья-урок по созданию данного приложения To-Do доступна по адресу: <br>
-[https://webadventures.ru/todo-app-python-react/](https://webadventures.ru/todo-app-python-react/)
-- Дизайн макеты иньеофейса: <br>
+- A detailed tutorial article on creating this To-Do application is available at: <br>
+[https://webadventures.ru/todo-app-python-react/](https://webadventures.ru/todo-app-python-react/) (Russian language)
+- Design mockups: <br>
 [Figma - ToDo app](https://www.figma.com/design/82XLv7BujFtQfscglOLDju/ToDo-App?node-id=0-1&t=mzFv79mBFzUP2Job-0)
 
+## Technology Stack
 
-## Технологический стек
 
-### Бекенд
+### Backend
 
-- **Python** - один из самы перспективных языков программирования для построения api-сревиса, по индексу [TIOBE](https://www.tiobe.com/tiobe-index/) и [Google Trands](https://trends.google.ru/trends/explore?date=now%201-d&geo=RU&q=python,C,Java,JavaScript,Go&hl=en) занимает уверенную 1-ю позицию.
-- **FastAPI** - современный, быстрый и высокопроизводительный веб-фреймворк для создания API на Python
-- **uvicorn** - асинхронный сервер для запуска FastAPI приложений
-- **PostgreSQL** - популярная реляционная база данных
-- **SQLAlchemy** - библиотека Python для работы с базами данных, обеспечивающая слой абстракции между кодом и базой данных
+- **Python** - one of the most promising programming languages for building API services, ranking 1st by [TIOBE](https://www.tiobe.com/tiobe-index/) and [Google Trends](https://trends.google.com/trends/explore?date=now%201-d&geo=RU&q=python,C,Java,JavaScript,Go&hl=en).
+- **FastAPI** - a modern, fast, and high-performance web framework for building APIs with Python.
+- **uvicorn** - an asynchronous server for running FastAPI applications.
+- **PostgreSQL** - a popular relational database.
+- **SQLAlchemy** - a Python library for database interaction, providing an abstraction layer between the code and the database.
 
-### Фронтенд
+### Frontend
 
-- **React** - популярная JavaScript библиотека для создания пользовательских интерфейсов
-- **TypeScript** - statically-typed superset of JavaScript
-- **Vite** - современный инструмент для создания и разработки веб-приложений с горячей перезагрузкой и многим другим
+- **React** - a popular JavaScript library for building user interfaces.
+- **TypeScript** - a statically-typed superset of JavaScript.
+- **Vite** - a modern build tool for creating and developing web applications with hot-reloading and more.
 
-### Структура проекта
+### Project Structure
 
 ```markdown
     todo-app/
@@ -58,35 +58,36 @@
 ```
 
 
-## Запуск проекта
+## Running the Project
 
-### Запуск бекенда
+### Running the Backend
 
-1.   Активируйте виртуальное окружение Python (если используется):
+1.   Activate the Python virtual environment (if used):
         ```bash
         .\venv\Scripts\activate   # Windows
         source venv/bin/activate  # Unix/macOS
         ```
-        Когда закончите сессию разработки, можете деактивировать виртуальное окружение с помощью команды deactivate в терминале, где было активировано окружение. Это вернет вас к глобальному окружению Python.
-          
+        When you finish the development session, you can deactivate the virtual environment using the deactivate command in the terminal where the environment was activated. This will return you to the global Python environment.
 
-2.       uvicorn main:app --reload
+2.    Start the server:
+        ```bash
+            uvicorn main:app --reload
+        ```
+      The backend will be running and available at: http://127.0.0.1:8000/
 
-    Бекенд будет запущен и доступен по адресу: [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
+### Running the Frontend
 
-### Запуск фронтенда
-
-1. Установите зависимости:
+1. Install dependencies:
 
         npm install
 
-2. Запустите локальный сервер разработки:
+2. Start the local development server:
 
         npm run dev
 
-    Или используйте команду для Vite:
+    Or use the command for Vite::
 
         npx vite
 
         
-    Фронтенд будет запущен и доступен по адресу: http://127.0.0.1:517
+    The frontend will be running and available at: http://127.0.0.1:5173
