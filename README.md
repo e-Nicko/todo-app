@@ -62,18 +62,29 @@ This "To-Do" application was developed as an educational project to demonstrate 
 
 ### Running the Backend
 
-1.   Activate the Python virtual environment (if used):
+1.    Create `.env` file in `backend` directory <br>
+      with your data base connection constants:
+        ```bash
+        DB_HOST=localhost
+        DB_USER=todo_user
+        DB_PASSWORD=123
+        DB_NAME=todo_db
+        ```
+        *This constants will be used in `models.py` file for connecting to database.*
+      
+
+2.    Activate the Python virtual environment (if used):
         ```bash
         .\venv\Scripts\activate   # Windows
         source venv/bin/activate  # Unix/macOS
         ```
-        When you finish the development session, you can deactivate the virtual environment using the deactivate command in the terminal where the environment was activated. This will return you to the global Python environment.
+        *When you finish the development session, you can deactivate the virtual environment using the `deactivate` command in the terminal where the environment was activated. This will return you to the global Python environment.*
 
 2.    Start the server:
         ```bash
             uvicorn main:app --reload
         ```
-      The backend will be running and available at: http://127.0.0.1:8000/
+      *The backend will be running and available at: http://127.0.0.1:8000/*
 
 ### Running the Frontend
 
