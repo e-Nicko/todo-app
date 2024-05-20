@@ -1,3 +1,9 @@
 #App {
-  width:100vw;
+  width:auto;
+}
+
+.Task {
+  display: flex;
+  gap: 10px;
+  padding: 6px;
 }
