@@ -14,13 +14,19 @@ const AddTask: React.FC<AddTaskProps> = ({ onAdd }) => {
         setTitle('');
     };
 
+    const handleKeyDown = (e: React.KeyboardEvent) => {
+        if (e.key === 'Enter') {
+            handleSubmit(e);
+        }
+    };
+
     return (
         <form className="addTask" onSubmit={handleSubmit}>
           <input 
             type="text" 
-            value={title} onChange={
-                (e) => setTitle(e.target.value)
-                } 
+            value={title} 
+            onChange={(e) => setTitle(e.target.value)} 
+            onKeyDown={handleKeyDown}
             placeholder="Add new task" 
           />
           <button type="submit">Add</button>
