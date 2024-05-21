@@ -1,9 +1,16 @@
 #App {
   width:auto;
+  padding: 0 40px;
 }
 
 .Task {
   display: flex;
   gap: 10px;
   padding: 6px;
+}
+
+.addTask {
+  margin-bottom: 15px;
+  display:flex;
+  gap:10px;
 }

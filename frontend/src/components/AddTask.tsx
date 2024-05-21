@@ -15,7 +15,7 @@ const AddTask: React.FC<AddTaskProps> = ({ onAdd }) => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form className="addTask" onSubmit={handleSubmit}>
           <input 
             type="text" 
             value={title} onChange={
