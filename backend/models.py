@@ -1,7 +1,8 @@
 import os
-from sqlalchemy import create_engine, Column, Integer, String, Boolean
+from sqlalchemy import create_engine, Column, Integer, String, Boolean, DateTime
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
+from datetime import datetime
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -18,7 +19,12 @@ SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
 
 class Task(Base):
-    __tablename__ = "tasks"
+    __tablename__ = 'tasks'
+    
     id = Column(Integer, primary_key=True, index=True)
     title = Column(String, index=True)
     completed = Column(Boolean, default=False)
+    createdAt = Column(DateTime, default=datetime.utcnow)
+
+# Create the tables in the database
+Base.metadata.create_all(bind=engine)

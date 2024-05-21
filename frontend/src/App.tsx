@@ -47,7 +47,7 @@ const App: React.FC = () => {
   // Добавление новой задачи
   const handleAddTask = async (title: string) => {
     const newTask = await addTask(title);
-    setTasks([...tasks, newTask]);
+    setTasks([newTask, ...tasks]);
   };
 
   // Переключение состояния задачи (completed)
