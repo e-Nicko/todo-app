@@ -80,7 +80,9 @@ const App: React.FC = () => {
 
   return (
     <div id="App">
-      <h1>Todo List</h1>
+      <h1>
+        Todo List<sup className="version">v1.0.0</sup>
+      </h1>
       <AddTask onAdd={handleAddTask} />
       {tasks.map((task) => (
         <Task
