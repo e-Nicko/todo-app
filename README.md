@@ -62,8 +62,7 @@ This "To-Do" application was developed as an educational project to demonstrate 
 
 ### Running the Backend
 
-1.    Create `.env` file in `backend` directory <br>
-      with your data base connection constants:
+1.    Create database in [PostgreSQL](https://www.postgresql.org/) and make `.env` file in `backend` directory with your database connection constants:
         ```bash
         DB_HOST=localhost
         DB_USER=todo_user
@@ -73,7 +72,7 @@ This "To-Do" application was developed as an educational project to demonstrate 
         *This constants will be used in `models.py` file for connecting to database.*
       
 
-2.    Activate the Python virtual environment (if used):
+3.    Activate the Python virtual environment (if used):
         ```bash
         .\venv\Scripts\activate   # Windows
         source venv/bin/activate  # Unix/macOS
