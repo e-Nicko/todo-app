@@ -8,10 +8,15 @@
 
 This "To-Do" application was developed as an educational project to demonstrate the interaction between a Python/FastAPI backend and a React/TypeScript frontend.
 
+<img src="https://github.com/e-Nicko/todo-app/assets/16775047/9574596a-c39b-491a-9634-455f766a901c" width="100%">
+
+<hr>
+
 - A detailed tutorial article on creating this To-Do application is available at: <br>
 [https://webadventures.ru/todo-app-python-react/](https://webadventures.ru/todo-app-python-react/) (Russian language)
 - Design mockups: <br>
 [Figma - ToDo app](https://www.figma.com/design/82XLv7BujFtQfscglOLDju/ToDo-App?node-id=0-1&t=mzFv79mBFzUP2Job-0)
+
 
 ## Technology Stack
 
