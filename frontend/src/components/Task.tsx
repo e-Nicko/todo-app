@@ -12,7 +12,7 @@ const Task: React.FC<TaskProps> = ({ id, title, completed, onDelete, onToggleCom
     <div className="Task">
         <input type="checkbox" checked={completed} onChange={() => onToggleCompleted(id)} />
         <span>{title}</span>
-        <button onClick={() => onDelete(id)}>Delete</button>
+        <button onClick={() => onDelete(id)}>X</button>
     </div>
 );
 

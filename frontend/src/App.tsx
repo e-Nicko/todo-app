@@ -3,7 +3,7 @@ import Task from "./components/Task";
 import AddTask from "./components/AddTask";
 import "./App.css";
 
-// Тип для задачи
+// Type definition for a task
 type TaskType = {
   id: number;
   title: string;
@@ -13,6 +13,7 @@ type TaskType = {
 const App: React.FC = () => {
   const [tasks, setTasks] = useState<TaskType[]>([]);
 
+  // Function to add a new task
   async function addTask(title: string) {
     const response = await fetch("http://localhost:8000/tasks/", {
       method: "POST",
@@ -24,7 +25,7 @@ const App: React.FC = () => {
     return response.json();
   }
 
-  // Загрузка всех задач
+  // Fetch all tasks from the server when the component mounts
   useEffect(() => {
     const fetchTasks = async () => {
       try {
@@ -34,7 +35,8 @@ const App: React.FC = () => {
           console.log("No tasks found");
         } else {
           console.log("Tasks:", data);
-          setTasks(data);  // Устанавливаем задачи в состояние
+          // Set the fetched tasks to the state
+          setTasks(data);
         }
       } catch (error) {
         console.error("Error fetching tasks:", error);
@@ -44,13 +46,14 @@ const App: React.FC = () => {
     fetchTasks();
   }, []);
 
-  // Добавление новой задачи
+  // Handle adding a new task
   const handleAddTask = async (title: string) => {
     const newTask = await addTask(title);
+    // Add the new task to the state
     setTasks([newTask, ...tasks]);
   };
 
-  // Переключение состояния задачи (completed)
+  // Handle toggling the completed state of a task
   const handleToggleCompleted = async (id: number) => {
     const task = tasks.find((task) => task.id === id);
     if (task) {
@@ -63,17 +66,19 @@ const App: React.FC = () => {
         body: JSON.stringify(updatedTask),
       });
       if (response.ok) {
+        // Update the task in the state
         setTasks(tasks.map((t) => (t.id === id ? updatedTask : t)));
       }
     }
   };
 
-  // Удаление задачи
+  // Handle deleting a task
   const handleDeleteTask = async (id: number) => {
     const response = await fetch(`http://localhost:8000/tasks/${id}`, {
       method: "DELETE",
     });
     if (response.ok) {
+      // Remove the task from the state
       setTasks(tasks.filter((task) => task.id !== id));
     }
   };
