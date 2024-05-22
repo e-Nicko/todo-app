@@ -7,6 +7,8 @@
 [![Vite](https://img.shields.io/badge/vite-5.2.11-A750FE.svg)](https://vitejs.dev/)
 
 This "To-Do" application was developed as an educational project to demonstrate the interaction between a Python/FastAPI backend and a React/TypeScript frontend.
+The project provide a simple, functional demo of a to-do application that allows users to add, delete, and mark tasks as complete. 
+The frontend design is intentionally kept minimal with basic CSS styles to ensure clarity and ease of understanding for educational purposes.
 
 <img src="https://github.com/e-Nicko/todo-app/assets/16775047/88b76f42-b56c-4408-8dc5-0addb4157ae4" width="100%">
 
