@@ -8,7 +8,7 @@
 
 This "To-Do" application was developed as an educational project to demonstrate the interaction between a Python/FastAPI backend and a React/TypeScript frontend.
 
-<img src="https://github.com/e-Nicko/todo-app/assets/16775047/9574596a-c39b-491a-9634-455f766a901c" width="100%">
+<img src="https://github.com/e-Nicko/todo-app/assets/16775047/88b76f42-b56c-4408-8dc5-0addb4157ae4" width="100%">
 
 <hr>
 
