@@ -18,7 +18,7 @@ This "To-Do" application was developed as an educational project to demonstrate 
 [Figma - ToDo app](https://www.figma.com/design/82XLv7BujFtQfscglOLDju/ToDo-App?node-id=0-1&t=mzFv79mBFzUP2Job-0)
 
 
-## Technology Stack
+## ⚙️ Technology Stack
 
 
 ### Backend
@@ -35,7 +35,7 @@ This "To-Do" application was developed as an educational project to demonstrate 
 - **TypeScript** - a statically-typed superset of JavaScript.
 - **Vite** - a modern build tool for creating and developing web applications with hot-reloading and more.
 
-### 📂 Project Structure
+## 📂 Project Structure
 
 ```markdown
     todo-app/
@@ -63,7 +63,7 @@ This "To-Do" application was developed as an educational project to demonstrate 
 ```
 
 
-### 🗄️ Database table `tasks`
+## 🗄️ Database table `tasks`
 
 | Column      | Type                       | Collation | Nullable | Default                          |
 |-------------|----------------------------|-----------|----------|----------------------------------|
