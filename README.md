@@ -35,7 +35,7 @@ This "To-Do" application was developed as an educational project to demonstrate 
 - **TypeScript** - a statically-typed superset of JavaScript.
 - **Vite** - a modern build tool for creating and developing web applications with hot-reloading and more.
 
-### Project Structure
+### 📂 Project Structure
 
 ```markdown
     todo-app/
@@ -63,7 +63,28 @@ This "To-Do" application was developed as an educational project to demonstrate 
 ```
 
 
-## Running the Project
+### 🗄️ Database table `tasks`
+
+| Column      | Type                       | Collation | Nullable | Default                          |
+|-------------|----------------------------|-----------|----------|----------------------------------|
+| `id`        | integer                    |           | not null | nextval('tasks_id_seq'::regclass)|
+| `title`     | character varying          |           |          |                                  |
+| `completed` | boolean                    |           |          |                                  |
+| `createdAt` | timestamp without time zone|           |          | CURRENT_TIMESTAMP                |
+
+
+
+#### Indexes
+
+- "tasks_pkey" PRIMARY KEY, btree (id)
+- "ix_tasks_id" btree (id)
+- "ix_tasks_title" btree (title)
+
+
+
+
+
+## ▶️ Running the Project
 
 ### Running the Backend
 
