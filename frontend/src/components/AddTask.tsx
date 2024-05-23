@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
+import Spinner from './spinner/Spinner';
 
 // Interface defining the props for AddTask component
 interface AddTaskProps {
     onAdd: (title: string) => void;  // Function to handle adding a new task
+    loading?: boolean;
 }
 
-const AddTask: React.FC<AddTaskProps> = ({ onAdd }) => {
+const AddTask: React.FC<AddTaskProps> = ({ onAdd, loading}) => {
     const [title, setTitle] = useState('');  // State to keep track of the task title input
 
     // Function to handle form submission
@@ -31,8 +33,11 @@ const AddTask: React.FC<AddTaskProps> = ({ onAdd }) => {
             onChange={(e) => setTitle(e.target.value)}  
             onKeyDown={handleKeyDown}  
             placeholder="Add new task"  
+            disabled={loading}
           />
-          <button type="submit">Add</button>
+            <button type="submit">
+                {loading ? <Spinner />:"Add"}
+            </button>
         </form>
     );
 };

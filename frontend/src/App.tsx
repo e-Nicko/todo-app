@@ -12,18 +12,7 @@ type TaskType = {
 
 const App: React.FC = () => {
   const [tasks, setTasks] = useState<TaskType[]>([]);
-
-  // Function to add a new task
-  async function addTask(title: string) {
-    const response = await fetch("http://localhost:8000/tasks/", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ title }),
-    });
-    return response.json();
-  }
+  const [addTaskLoading, setAddTaskLoading] = useState<boolean>(false);
 
   // Fetch all tasks from the server when the component mounts
   useEffect(() => {
@@ -48,10 +37,29 @@ const App: React.FC = () => {
 
   // Handle adding a new task
   const handleAddTask = async (title: string) => {
-    const newTask = await addTask(title);
-    // Add the new task to the state
-    setTasks([newTask, ...tasks]);
+    setAddTaskLoading(true);
+    try {
+      const newTask = await addTask(title);
+      setTasks([newTask, ...tasks]);
+    } catch (error) {
+      console.error('Error adding task:', error);
+    } finally {
+      setAddTaskLoading(false);
+    }
   };
+  
+  // Function to add a new task
+  async function addTask(title: string) {
+    setAddTaskLoading(true);
+    const response = await fetch("http://localhost:8000/tasks/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ title }),
+    })
+    return response.json();
+  }
 
   // Handle toggling the completed state of a task
   const handleToggleCompleted = async (id: number) => {
@@ -86,9 +94,9 @@ const App: React.FC = () => {
   return (
     <div id="App">
       <h1>
-        Todo List<sup className="version">v0.1.0</sup>
+        Todo List<sup className="version">v0.1.1</sup>
       </h1>
-      <AddTask onAdd={handleAddTask} />
+      <AddTask onAdd={handleAddTask} loading={addTaskLoading} />
       {tasks.map((task) => (
         <Task
           key={task.id}
