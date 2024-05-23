@@ -94,7 +94,7 @@ const App: React.FC = () => {
   return (
     <div id="App">
       <h1>
-        Todo List<sup className="version">v0.1.0</sup>
+        Todo List<sup className="version">v0.1.1</sup>
       </h1>
       <AddTask onAdd={handleAddTask} loading={addTaskLoading} />
       {tasks.map((task) => (
