@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import Task from "./components/Task";
+import Task from "./components/task/Task";
 import AddTask from "./components/AddTask";
-import "./App.css";
+import "./App.scss";
 
 // Type definition for a task
 type TaskType = {
