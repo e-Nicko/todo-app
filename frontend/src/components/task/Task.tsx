@@ -1,4 +1,5 @@
 import React from 'react';
+import "./Task.scss";
 
 interface TaskProps {
     id: number;
