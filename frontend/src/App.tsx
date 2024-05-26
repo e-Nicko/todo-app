@@ -93,20 +93,22 @@ const App: React.FC = () => {
 
   return (
     <div id="App">
-      <h1>
-        Todo List<sup className="version">v0.1.1</sup>
-      </h1>
-      <AddTask onAdd={handleAddTask} loading={addTaskLoading} />
-      {tasks.map((task) => (
-        <Task
-          key={task.id}
-          id={task.id}
-          title={task.title}
-          completed={task.completed}
-          onToggleCompleted={handleToggleCompleted}
-          onDelete={handleDeleteTask}
-        />
-      ))}
+      <div className="MainWrapper">
+        <h1>
+          Todo List<sup className="version">v0.1.1</sup>
+        </h1>
+        <AddTask onAdd={handleAddTask} loading={addTaskLoading} />
+        {tasks.map((task) => (
+          <Task
+            key={task.id}
+            id={task.id}
+            title={task.title}
+            completed={task.completed}
+            onToggleCompleted={handleToggleCompleted}
+            onDelete={handleDeleteTask}
+          />
+        ))}
+      </div>
     </div>
   );
 };
