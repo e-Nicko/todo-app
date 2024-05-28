@@ -20,6 +20,8 @@ The frontend design is intentionally kept minimal with basic CSS styles to ensur
 [Figma - ToDo app](https://www.figma.com/design/82XLv7BujFtQfscglOLDju/ToDo-App?node-id=0-1&t=mzFv79mBFzUP2Job-0)
 
 
+<br/>
+
 ## ⚙️ Technology Stack
 
 
@@ -64,6 +66,7 @@ The frontend design is intentionally kept minimal with basic CSS styles to ensur
     └── README.md
 ```
 
+<br/>
 
 ## 🗄️ Database table `tasks`
 
@@ -84,7 +87,7 @@ The frontend design is intentionally kept minimal with basic CSS styles to ensur
 
 
 
-
+<br/>
 
 ## ▶️ Running the Project
 
