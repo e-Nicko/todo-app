@@ -130,9 +130,11 @@ The frontend design is intentionally kept minimal with basic CSS styles to ensur
         
     The frontend will be running and available at: http://127.0.0.1:5173
 
+<br/>
+
 <hr>
 
-<br/><br/>
+<br/>
 ## TO-DO
 Future Enhancements 🌟
 The following features are planned for future releases:
@@ -145,10 +147,7 @@ The following features are planned for future releases:
 * [ ] Reorder Tasks: Enable users to change the order of tasks in the list.
 
 
-<hr>
-
-<br/><br/>
-
+<br/>
 
 
 ## License
