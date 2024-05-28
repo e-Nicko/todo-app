@@ -135,6 +135,7 @@ The frontend design is intentionally kept minimal with basic CSS styles to ensur
 <hr>
 
 <br/>
+
 ## TO-DO
 Future Enhancements 🌟
 The following features are planned for future releases:
