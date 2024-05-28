@@ -98,7 +98,7 @@ The frontend design is intentionally kept minimal with basic CSS styles to ensur
         DB_NAME=todo_db
         ```
         *This constants will be used in `models.py` file for connecting to database.*
-      
+        *You simply rename template `.env.example` to `.env`
 
 3.    Activate the Python virtual environment (if used):
         ```bash
@@ -131,6 +131,25 @@ The frontend design is intentionally kept minimal with basic CSS styles to ensur
     The frontend will be running and available at: http://127.0.0.1:5173
 
 <hr>
+
+<br/><br/>
+## TO-DO
+Future Enhancements 🌟
+The following features are planned for future releases:
+
+* [x] onDelete: add spinner loading.
+* [ ] Mypy: Add static type checking to ensure code reliability and correctness.
+* [ ] Docker: Set up CI/CD.
+* [ ] New Design: Update the UI to a more advanced version with animation.
+* [ ] Edit Task: Allow users to edit the description of existing tasks.
+* [ ] Reorder Tasks: Enable users to change the order of tasks in the list.
+
+
+<hr>
+
+<br/><br/>
+
+
 
 ## License
 
