@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Task from "./components/task/Task";
 import AddTask from "./components/AddTask";
 import "./App.scss";
+import AppTitle from "./components/AppTitle/AppTitle";
 
 // Type definition for a task
 type TaskType = {
@@ -94,9 +95,7 @@ const App: React.FC = () => {
   return (
     <div id="App">
       <div className="MainWrapper">
-        <h1>
-          Todo List<sup className="version">v0.1.1</sup>
-        </h1>
+        <AppTitle />
         <AddTask onAdd={handleAddTask} loading={addTaskLoading} />
         {tasks.map((task) => (
           <Task
