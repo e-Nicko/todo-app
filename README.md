@@ -144,7 +144,7 @@ The frontend design is intentionally kept minimal with basic CSS styles to ensur
 The following features are planned for upcomming releases:
 
 * [x] <s>onDelete: add spinner loading.</s>
-* [ ] Ruff: Integrate a linter to maintain code quality.
+* [x] Ruff: Integrate a linter to maintain code quality.
 * [ ] Mypy: Add static type checking to ensure code reliability and correctness.
 * [ ] Docker: Set up CI/CD.
 * [ ] New Design: Update the UI to a more advanced version with animation.
