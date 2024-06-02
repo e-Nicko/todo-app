@@ -25,6 +25,20 @@ class Task(Base):
     title = Column(String, index=True)
     completed = Column(Boolean, default=False)
     createdAt = Column(DateTime, default=datetime.utcnow)
+    position = Column(Integer)
 
 # Create the tables in the database
 Base.metadata.create_all(bind=engine)
+
+def get_db():
+    """
+    Dependency to get the database session.
+    
+    Yields:
+        db (Session): Database session.
+    """
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()

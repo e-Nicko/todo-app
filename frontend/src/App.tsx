@@ -9,6 +9,7 @@ type TaskType = {
   id: number;
   title: string;
   completed: boolean;
+  position: number;
 };
 
 const App: React.FC = () => {
