@@ -10,7 +10,7 @@ This "To-Do" application was developed as an educational project to demonstrate 
 The project provide a simple, functional demo of a to-do application that allows users to add, delete, and mark tasks as complete. 
 The frontend design is intentionally kept minimal with basic CSS styles to ensure clarity and ease of understanding for educational purposes.
 
-<img src="https://github.com/e-Nicko/todo-app/assets/16775047/ff50bf1d-2ae5-4b99-bf6e-5aa0d290cb54" width="100%">
+<img src="todo-app-v0.1.1.gif" width="100%">
 
 <hr>
 
@@ -159,7 +159,7 @@ The following features are planned for upcomming releases:
 * [ ] Docker: Set up CI/CD.
 * [ ] New Design: Update the UI to a more advanced version with animation.
 * [ ] Edit Task: Allow users to edit the description of existing tasks.
-* [ ] Reorder Tasks: Enable users to change the order of tasks in the list.
+* [x] <s>Reorder Tasks: Enable users to change the order of tasks in the list.</s>
 
 
 <br/>
