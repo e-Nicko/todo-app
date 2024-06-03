@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Reorder } from "framer-motion";
 import Task from "./components/task/Task";
 import AddTask from "./components/AddTask";
 import "./App.scss";
@@ -93,21 +94,66 @@ const App: React.FC = () => {
     }
   };
 
+  // Handle reordering tasks
+  const handleReorder = (newOrder: TaskType[]) => {
+    setTasks(newOrder);
+    console.log("New order during drag:", newOrder);
+  };
+
+  // Handle when drag ends
+  const handleDragEnd = async () => {
+    console.log("Final order on drag end:", tasks);
+    const reorderedTasks = tasks.map((task, index) => ({ id: task.id, position: index }));
+    console.log("Sending reordered tasks to server:", reorderedTasks);
+
+    try {
+        const response = await fetch("http://localhost:8000/tasks/reorder", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ tasks: reorderedTasks }),
+        });
+
+        if (response.ok) {
+            console.log("Reordered tasks saved successfully");
+        } else {
+            console.error("Failed to save reordered tasks");
+            const errorData = await response.json();
+            console.error("Error details:", errorData);
+        }
+    } catch (error) {
+        console.error("Error sending reordered tasks to server:", error);
+    }
+  };
+
+  // Add event listener to detect pointer up event
+  useEffect(() => {
+    window.addEventListener('pointerup', handleDragEnd);
+    return () => {
+      window.removeEventListener('pointerup', handleDragEnd);
+    };
+  }, [tasks]);
+
   return (
     <div id="App">
       <div className="MainWrapper">
         <AppTitle />
         <AddTask onAdd={handleAddTask} loading={addTaskLoading} />
-        {tasks.map((task) => (
-          <Task
-            key={task.id}
-            id={task.id}
-            title={task.title}
-            completed={task.completed}
-            onToggleCompleted={handleToggleCompleted}
-            onDelete={handleDeleteTask}
-          />
-        ))}
+        <Reorder.Group
+          axis="y"
+          onReorder={handleReorder}
+          values={tasks}
+        >
+          {tasks.map((task) => (
+            <Task
+              key={task.id}
+              task={task}
+              onToggleCompleted={handleToggleCompleted}
+              onDelete={handleDeleteTask}
+            />
+          ))}
+        </Reorder.Group>
       </div>
     </div>
   );

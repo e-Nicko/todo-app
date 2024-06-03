@@ -25,5 +25,5 @@ def read_tasks(skip: int = 0, limit: int = 10, db: Session = Depends(get_db)):
       - Returns a list of tasks as JSON objects.
         Example: [{ "id": 1, "title": "Task 1", "completed": false, "createdAt": "2023-01-01T00:00:00Z" }, ...]
     """
-    tasks = db.query(Task).order_by(Task.createdAt.desc()).offset(skip).limit(limit).all()
+    tasks = db.query(Task).order_by(Task.position).offset(skip).limit(limit).all()
     return tasks

@@ -1,11 +1,32 @@
 .Task {
     background: #333;
     border-radius: 8px;
-    padding: 8px;
-    margin-bottom:8px;
-    color:#ddd;
+    padding: 0;
+    margin-bottom: 8px;
+    color: #ddd;
     font-weight: 500;
     max-width: 300px;
-    display:flex;
+    user-select: none; // Запрет на выделение текста
+    .reorder-handle {
+        cursor: grab;
+        padding: 5px;
+    }
+    .TaskTitle {
+        display: inline-block;
+        width:100%;
+    }
+}
+
+ul {
+    margin:0;
+    padding: 0;
+}
+
+
+.TaskInnerWrapper {
+    width:100%;
+    display: flex;
+    align-items: center;
     justify-content: space-between;
+    gap: 6px;
 }
