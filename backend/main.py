@@ -1,7 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from routers import reorder
-from routers.tasks import router as tasks_router
+from routers import router as tasks_router
 
 app = FastAPI()
 
@@ -14,4 +13,3 @@ app.add_middleware(
 )
 
 app.include_router(tasks_router)
-app.include_router(reorder.router)

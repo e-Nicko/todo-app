@@ -50,13 +50,12 @@ The frontend design is intentionally kept minimal with basic CSS styles to ensur
     │   ├── models.py
     │   ├── initialize_db.py
     ├── routers/
-    │   ├── tasks/
-    │   │   ├── create_task.py
-    │   │   ├── read_tasks.py
-    │   │   ├── update_task.py
-    │   │   ├── delete_task.py
-    │   │   └── __init__.py
-    │   └── reorder.py
+    │   ├── create_task.py
+    │   ├── delete_task.py
+    │   ├── read_tasks.py
+    │   ├── reorder.py
+    │   ├── update_task.py
+    │   └── __init__.py
     │   ├── schemas/
     │   │   ├── reorder_request.py
     │   │   └── task.py
