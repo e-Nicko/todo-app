@@ -160,6 +160,7 @@ The following features are planned for upcomming releases:
 * [ ] New Design: Update the UI to a more advanced version with animation.
 * [ ] Edit Task: Allow users to edit the description of existing tasks.
 * [x] <s>Reorder Tasks: Enable users to change the order of tasks in the list.</s>
+* [ ] Framer Motion: Exit animation for list's Task
 
 
 <br/>
