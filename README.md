@@ -10,7 +10,7 @@ This "To-Do" application was developed as an educational project to demonstrate 
 The project provide a simple, functional demo of a to-do application that allows users to add, delete, and mark tasks as complete. 
 The frontend design is intentionally kept minimal with basic CSS styles to ensure clarity and ease of understanding for educational purposes.
 
-<img src="todo-app-v0.1.1.gif" width="100%">
+<img src="screenshots/todo-app-v0.1.1.gif" width="100%">
 
 <hr>
 
@@ -72,6 +72,8 @@ The frontend design is intentionally kept minimal with basic CSS styles to ensur
     │   ├── package.json
     │   ├── vite.config.ts
     │   └── ...
+    │
+    ├── screenshots
     │
     └── README.md
 ```
