@@ -1,6 +1,6 @@
 # 📝✅ "To-Do App" by Python, Fast API Postgre, React
 
-[![Python](https://img.shields.io/badge/python-3.11.0-blue.svg)](https://www.python.org/)
+[![Python](https://img.shields.io/badge/python-3.12.3-blue.svg)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/fastapi-0.111.0-green.svg)](https://fastapi.tiangolo.com/)
 [![React](https://img.shields.io/badge/react-18.2.66-61DAFB.svg)](https://reactjs.org/)
 [![TypeScript](https://img.shields.io/badge/typescript-7.2.0-blue.svg)](https://www.typescriptlang.org/)
