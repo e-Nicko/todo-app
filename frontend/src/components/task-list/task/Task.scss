@@ -1,11 +1,11 @@
 .Task {
-    background: #333;
+    background: #fff;
+    height: 60px;
     border-radius: 8px;
     padding: 0;
     margin-bottom: 8px;
-    color: #ddd;
+    color: #888;
     font-weight: 500;
-    max-width: 300px;
     user-select: none; // Запрет на выделение текста
     .reorder-handle {
         cursor: grab;
@@ -15,6 +15,7 @@
         display: inline-block;
         width:100%;
     }
+    padding: 0 16px;
 }
 
 ul {

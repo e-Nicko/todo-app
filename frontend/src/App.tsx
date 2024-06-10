@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Reorder } from "framer-motion";
-import Task from "./components/task/Task";
 import AddTask from "./components/AddTask";
 import "./App.scss";
 import AppTitle from "./components/AppTitle/AppTitle";
+import TaskList from "./components/task-list/TaskList";
 
 // Type definition for a task
 type TaskType = {
@@ -27,7 +26,6 @@ const App: React.FC = () => {
           console.log("No tasks found");
         } else {
           console.log("Tasks:", data);
-          // Set the fetched tasks to the state
           setTasks(data);
         }
       } catch (error) {
@@ -77,7 +75,6 @@ const App: React.FC = () => {
         body: JSON.stringify(updatedTask),
       });
       if (response.ok) {
-        // Update the task in the state
         setTasks(tasks.map((t) => (t.id === id ? updatedTask : t)));
       }
     }
@@ -89,7 +86,6 @@ const App: React.FC = () => {
       method: "DELETE",
     });
     if (response.ok) {
-      // Remove the task from the state
       setTasks(tasks.filter((task) => task.id !== id));
     }
   };
@@ -137,23 +133,20 @@ const App: React.FC = () => {
 
   return (
     <div id="App">
-      <div className="MainWrapper">
+      <div id="MainWrapper">
         <AppTitle />
         <AddTask onAdd={handleAddTask} loading={addTaskLoading} />
-        <Reorder.Group
-          axis="y"
+        <TaskList
+          tasks={tasks}
           onReorder={handleReorder}
-          values={tasks}
-        >
-          {tasks.map((task) => (
-            <Task
-              key={task.id}
-              task={task}
-              onToggleCompleted={handleToggleCompleted}
-              onDelete={handleDeleteTask}
-            />
-          ))}
-        </Reorder.Group>
+          onToggleCompleted={handleToggleCompleted}
+          onDelete={handleDeleteTask}
+        />
+        <div className="Footer">
+          <a href="https://github.com/e-Nicko/todo-app" target="_blank">
+            github.com/e-Nicko/todo-app
+          </a>
+        </div>
       </div>
     </div>
   );

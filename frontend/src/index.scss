@@ -11,4 +11,21 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  overflow-y: hidden;
+}
+
+* {margin:0; padding:0}
+
+
+
+#MainWrapper {
+  max-width:680px;
+  margin:0 auto;
+  padding: 20px;
+  box-sizing: content-box;
+  height: calc(100vh - 100px);
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
 }

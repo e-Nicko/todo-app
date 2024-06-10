@@ -34,3 +34,19 @@
   display:flex;
   gap:10px;
 }
+
+.Footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top:40px;
+  a {
+    color:#999;
+    text-decoration: none;
+    transition: .3s;
+    &:hover {
+      color:#fff;
+    }
+  }
+}
