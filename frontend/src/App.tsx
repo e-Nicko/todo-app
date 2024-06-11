@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import AddTask from "./components/AddTask";
 import "./App.scss";
 import AppTitle from "./components/AppTitle/AppTitle";
 import TaskList from "./components/task-list/TaskList";
+import Footer from "./components/footer/Footer";
 
 // Type definition for a task
 type TaskType = {
@@ -97,31 +98,31 @@ const App: React.FC = () => {
   };
 
   // Handle when drag ends
-  const handleDragEnd = async () => {
+  const handleDragEnd = useCallback(async () => {
     console.log("Final order on drag end:", tasks);
     const reorderedTasks = tasks.map((task, index) => ({ id: task.id, position: index }));
     console.log("Sending reordered tasks to server:", reorderedTasks);
 
     try {
-        const response = await fetch("http://localhost:8000/tasks/reorder", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ tasks: reorderedTasks }),
-        });
+      const response = await fetch("http://localhost:8000/tasks/reorder", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ tasks: reorderedTasks }),
+      });
 
-        if (response.ok) {
-            console.log("Reordered tasks saved successfully");
-        } else {
-            console.error("Failed to save reordered tasks");
-            const errorData = await response.json();
-            console.error("Error details:", errorData);
-        }
+      if (response.ok) {
+        console.log("Reordered tasks saved successfully");
+      } else {
+        console.error("Failed to save reordered tasks");
+        const errorData = await response.json();
+        console.error("Error details:", errorData);
+      }
     } catch (error) {
-        console.error("Error sending reordered tasks to server:", error);
+      console.error("Error sending reordered tasks to server:", error);
     }
-  };
+  }, [tasks]); // Add `tasks` as a dependency
 
   // Add event listener to detect pointer up event
   useEffect(() => {
@@ -129,24 +130,26 @@ const App: React.FC = () => {
     return () => {
       window.removeEventListener('pointerup', handleDragEnd);
     };
-  }, [tasks]);
+  }, [handleDragEnd, tasks]);
 
   return (
     <div id="App">
       <div id="MainWrapper">
-        <AppTitle />
-        <AddTask onAdd={handleAddTask} loading={addTaskLoading} />
+        
+        <header>
+          <AppTitle />
+          <AddTask onAdd={handleAddTask} loading={addTaskLoading} />
+        </header>
+
         <TaskList
           tasks={tasks}
           onReorder={handleReorder}
           onToggleCompleted={handleToggleCompleted}
           onDelete={handleDeleteTask}
         />
-        <div className="Footer">
-          <a href="https://github.com/e-Nicko/todo-app" target="_blank">
-            github.com/e-Nicko/todo-app
-          </a>
-        </div>
+
+        <Footer />
+
       </div>
     </div>
   );

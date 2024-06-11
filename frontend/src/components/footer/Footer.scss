@@ -1,0 +1,22 @@
+.Footer {
+    text-align: center;
+    margin-top: 20px;
+  
+    a {
+      color: #999; // Можно заменить на любой цвет
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  
+      svg {
+        margin-right: 8px;
+        fill: currentColor; // SVG будет наследовать цвет ссылки
+      }
+  
+      &:hover {
+        color: #fff; // Можно заменить на любой цвет для hover
+      }
+    }
+  }
+  
