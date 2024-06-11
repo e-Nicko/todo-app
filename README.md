@@ -149,6 +149,20 @@ The frontend design is intentionally kept minimal with basic CSS styles to ensur
 
 <hr>
 
+## Alternative way to start app
+In the root of project directory run:
+
+ -   `start.ps1` for Windows: 
+     ``` 
+        .\setup-and-run.ps1 
+     ```
+
+ -   or `start.sh` for Linux:
+     ``` 
+        .\setup-and-run.ps1
+     ```
+
+
 <br/>
 
 ## TO-DO
