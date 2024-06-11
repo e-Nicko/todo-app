@@ -9,7 +9,7 @@ const Footer = () => {
           aria-hidden="true"
           viewBox="0 0 16 16"
           version="1.1"
-          width="32"
+          width="24"
           data-view-component="true"
           className="octicon octicon-mark-github v-align-middle"
           fill="currentColor"
