@@ -152,14 +152,15 @@ The frontend design is intentionally kept minimal with basic CSS styles to ensur
 ## Alternative way to start app
 In the root of project directory run:
 
- -   `start.ps1` for Windows: 
+ -   Windows: start `start.ps1` 
      ``` 
-        .\setup-and-run.ps1 
+        .\start.ps1 
      ```
 
- -   or `start.sh` for Linux:
+ -   Linux:
+     Make the script executable: `chmod +x start.sh` and then start:
      ``` 
-        .\setup-and-run.ps1
+        .\start.sh
      ```
 
 
