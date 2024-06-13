@@ -114,8 +114,8 @@ The frontend design is intentionally kept minimal with basic CSS styles to ensur
         DB_PASSWORD=123
         DB_NAME=todo_db
         ```
-        *This constants will be used in `models.py` file for connecting to database.*
-        *You simply rename template `.env.example` to `.env`
+        *This constants will be used in `models.py` file for connecting to database.*<br>
+        *For making `.env` you can simply rename template `.env.example`  
 
 3.    Activate the Python virtual environment (if used):
         ```bash
