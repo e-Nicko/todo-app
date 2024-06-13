@@ -1,13 +1,12 @@
 # 📝✅ "To-Do App" by Python, Fast API Postgre, React
 [![Python](https://img.shields.io/badge/python-3.12.3-blue.svg)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/fastapi-0.111.0-green.svg)](https://fastapi.tiangolo.com/)
-[![SQLAlchemy](https://img.shields.io/badge/sqlalchemy-2.0.30-c02726.svg)]([https://fastapi.tiangolo.com/](https://www.sqlalchemy.org/))
+[![SQLAlchemy](https://img.shields.io/badge/sqlalchemy-2.0.30-c02726.svg)]([https://fastapi.tiangolo.com/](https://www.sqlalchemy.org/))<br>
 [![Vite](https://img.shields.io/badge/vite-5.2.11-A750FE.svg)](https://vitejs.dev/)
 [![React](https://img.shields.io/badge/react-18.2.66-61DAFB.svg)](https://reactjs.org/)
 [![TypeScript](https://img.shields.io/badge/typescript-7.2.0-blue.svg)](https://www.typescriptlang.org/)
 [![FramerMotion](https://img.shields.io/badge/framer‐motion-11.2.10-fc0091.svg)]([https://vitejs.dev/](https://www.framer.com/motion/))
 
-11.2.10
 
 This "To-Do" application was developed as an educational project to demonstrate the interaction between a Python/FastAPI backend and a React/TypeScript frontend.
 The project provide a simple, functional demo of a to-do application that allows users to add, delete, and mark tasks as complete. 
